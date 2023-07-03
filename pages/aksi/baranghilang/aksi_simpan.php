@@ -55,53 +55,53 @@ include "../../../lib/koneksi.php";
             };
         }
                 
-    //     $QuerySimpan = mysqli_query($koneksi, "INSERT INTO tbl_baranghilang (id_kategori, nama, gambar, deskripsi, tempat_terakhir, no_telp, tanggal) VALUES ('$kategori','$namaBarang','$namaGambar','$deskripsiBarang','$tempatTerakhir','$nomerTelepon','$tanggal')");
-    //     if ($QuerySimpan) {
-    //         echo "
-    // <script>
-    //     alert('Data berhasil disimpan');
-    //     window.location = '$admin_url'+'asset/adminweb.php?module=baranghilang';
-    // </script>";
-    //     }
+        $QuerySimpan = mysqli_query($koneksi, "INSERT INTO tbl_baranghilang (id_kategori, nama, gambar, deskripsi, tempat_terakhir, no_telp, tanggal) VALUES ('$kategori','$namaBarang','$namaGambar','$deskripsiBarang','$tempatTerakhir','$nomerTelepon','$tanggal')");
+        if ($QuerySimpan) {
+            echo "
+    <script>
+        alert('Data berhasil disimpan');
+        window.location = '$admin_url'+'asset/adminweb.php?module=baranghilang';
+    </script>";
+        }
         
-            if ($tipe_file == "image/jpeg" || $tipe_file = "image/png" || $tipe_file = "image/jpg") {
-                if ($ukuran_file <= 1000000) {
-                    if (move_uploaded_file($tmp_file, $path)) {
-                        $QuerySimpan = mysqli_query($koneksi, "INSERT INTO tbl_baranghilang (id_kategori, nama, gambar, deskripsi, tempat_terakhir, no_telp, tanggal) VALUES ('$kategori','$namaBarang','$namaGambar','$deskripsiBarang','$tempatTerakhir','$nomerTelepon','$tanggal')");
-                        if ($QuerySimpan) {
-                            echo "
-                    <script>
-                        alert('Data berhasil disimpan');
-                        window.location = '$admin_url'+'asset/adminweb.php?module=baranghilang';
-                    </script>";
-                        } else {
-                            echo "
-                    <script>
-                        alert('Data gagal disimpan');
-                        window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
-                    </script>";
-                        }
-                    } else {
-                        echo "
-                <script>
-                    alert('Data gambar gagal');
-                    window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
-                </script>";
-                    }
-                } else {
-                    echo "
-            <script>
-                alert('Data gambar terlalu besar');
-                window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
-            </script>";
-                }
-            } else {
-                echo "
-        <script>
-            alert('Type gambar salah');
-            window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
-        </script>";
-            }
+        //     if ($tipe_file == "image/jpeg" || $tipe_file = "image/png" || $tipe_file = "image/jpg") {
+        //         if ($ukuran_file <= 1000000) {
+        //             if (move_uploaded_file($tmp_file, $path)) {
+        //                 $QuerySimpan = mysqli_query($koneksi, "INSERT INTO tbl_baranghilang (id_kategori, nama, gambar, deskripsi, tempat_terakhir, no_telp, tanggal) VALUES ('$kategori','$namaBarang','$namaGambar','$deskripsiBarang','$tempatTerakhir','$nomerTelepon','$tanggal')");
+        //                 if ($QuerySimpan) {
+        //                     echo "
+        //             <script>
+        //                 alert('Data berhasil disimpan');
+        //                 window.location = '$admin_url'+'asset/adminweb.php?module=baranghilang';
+        //             </script>";
+        //                 } else {
+        //                     echo "
+        //             <script>
+        //                 alert('Data gagal disimpan');
+        //                 window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
+        //             </script>";
+        //                 }
+        //             } else {
+        //                 echo "
+        //         <script>
+        //             alert('Data gambar gagal');
+        //             window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
+        //         </script>";
+        //             }
+        //         } else {
+        //             echo "
+        //     <script>
+        //         alert('Data gambar terlalu besar');
+        //         window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
+        //     </script>";
+        //         }
+        //     } else {
+        //         echo "
+        // <script>
+        //     alert('Type gambar salah');
+        //     window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
+        // </script>";
+        //     }
         
      
 }
