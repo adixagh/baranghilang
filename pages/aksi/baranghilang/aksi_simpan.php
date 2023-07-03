@@ -1,5 +1,7 @@
 <?php
 
+include "../../../lib/config.php";
+include "../../../lib/koneksi.php";
 
     date_default_timezone_set('Asia/Jakarta');
 
@@ -8,7 +10,7 @@
         $ukuran_file = $_FILES['gambar']['size'];
         $tipe_file = $_FILES['gambar']['type'];
         $tmp_file = $_FILES['gambar']['tmp_name'];
-        $path = "../../upload/" . $namaGambar;
+        $path = "../../../admin/upload/" . $namaGambar;
 
         $kategori = $_POST['kategori'];
         $namaBarang = $_POST['namaBarang'];
@@ -53,7 +55,14 @@
             };
         }
                 
-
+    //     $QuerySimpan = mysqli_query($koneksi, "INSERT INTO tbl_baranghilang (id_kategori, nama, gambar, deskripsi, tempat_terakhir, no_telp, tanggal) VALUES ('$kategori','$namaBarang','$namaGambar','$deskripsiBarang','$tempatTerakhir','$nomerTelepon','$tanggal')");
+    //     if ($QuerySimpan) {
+    //         echo "
+    // <script>
+    //     alert('Data berhasil disimpan');
+    //     window.location = '$admin_url'+'asset/adminweb.php?module=baranghilang';
+    // </script>";
+    //     }
         
             if ($tipe_file == "image/jpeg" || $tipe_file = "image/png" || $tipe_file = "image/jpg") {
                 if ($ukuran_file <= 1000000) {

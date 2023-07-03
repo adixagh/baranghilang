@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-sm-12">
                 <label for="inputEmail3" >Masukkan Nomer Telepon Anda</label>
-                  <input type="text" name="nomorTelepon" value="" placeholder="" required="" class="form-control" /><br>
+                  <input type="text" name="nomerTelepon" value="" placeholder="" required="" class="form-control" /><br>
                 </div>
                 
               </div>
