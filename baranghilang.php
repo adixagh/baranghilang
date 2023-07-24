@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+$page = "baranghilang";
+
+
 // $id_member = $_SESSION['id_member'];
 include "lib/koneksi.php";
 include "lib/config.php";

@@ -4,7 +4,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     echo "<center>Anda harus login terlebih dahulu<br>";
     echo "<a href=../../index.php>Klik disini untuk Login</a></center>";
 } else {
-
+    
     include "../../../lib/config.php";
     include "../../../lib/koneksi.php";
 
@@ -20,8 +20,6 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $deskripsiBarang = $_POST['deskripsiBarang'];
     $tempatTerakhir = $_POST['tempatTerakhir'];
     $nomerTelepon = $_POST['nomerTelepon'];
-    $status = $_POST['status'];
-
 
     if (empty($namaBarang)) {
         $error['namaBarang'] = 'Nama barang kosong';
@@ -37,7 +35,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
             $error['deskripsiBarang'] = "Minimal 20 huruf";
         };
     }
-    if (empty($tempatTerakhir)) {
+        if (empty($tempatTerakhir)) {
         $error['tempatTerakhir'] = 'Tempat terakhir kosong';
     } else {
         if (strlen($tempatTerakhir) < 10) {
@@ -53,50 +51,49 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     }
 
 
-    if ($tipe_file == "image/jpeg" || $tipe_file = "image/png" || $tipe_file = "image/jpg") {
-        if ($ukuran_file <= 1000000) {
-            if (move_uploaded_file($tmp_file, $path)) {
+        if ($tipe_file == "image/jpeg" || $tipe_file = "image/png" || $tipe_file = "image/jpg" ) {
+            if ($ukuran_file <= 1000000) {
+                if (move_uploaded_file($tmp_file, $path)) {
                 $QueryEdit = mysqli_query($koneksi, "UPDATE tbl_baranghilang SET 
                 id_kategori = $kategori,
                 nama = '$namaBarang',
                 deskripsi = '$deskripsiBarang',
                 gambar = '$namaGambar',
                 tempat_terakhir = '$tempatTerakhir',
-                no_telp = '$nomerTelepon',
-                status = '$status'
+                no_telp = '$nomerTelepon'
                 WHERE id_baranghilang = $id_baranghilang");
-                if ($QueryEdit) {
-                    echo "
+                    if ($QueryEdit) {
+                        echo "
                     <script>
                         alert('Data berhasil dirubah');
                         window.location = '$admin_url'+'asset/adminweb.php?module=baranghilang';
                     </script>";
-                } else {
-                    echo "
+                    } else {
+                        echo "
                     <script>
                         alert('Data gagal dirubah');
                         window.location = '$admin_url'+'asset/adminweb.php?module=edit_baranghilang&id_baranghilang='+'$id_baranghilang';
                     </script>";
-                }
-            } else {
-                echo "
+                    }
+                } else {
+                    echo "
                 <script>
                     alert('Data gambar gagal');
                     window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
                 </script>";
-            }
-        } else {
-            echo "
+                }
+            } else {
+                echo "
             <script>
                 alert('Data gambar terlalu besar');
                 window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
             </script>";
-        }
-    } else {
-        echo "
+            }
+        } else {
+            echo "
         <script>
             alert('Type gambar salah');
             window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
         </script>";
-    }
+        } 
 }

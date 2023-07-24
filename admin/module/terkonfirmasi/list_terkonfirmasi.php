@@ -40,7 +40,7 @@ include "../../lib/koneksi.php";
                                             </tr>
                                         </thead>
                                         <?php
-                                        $kueriKategori = mysqli_query($koneksi, "SELECT * FROM tbl_baranghilang p INNER JOIN tbl_kategori k on p.id_kategori = k.id_kategori where status='Proses'");
+                                        $kueriKategori = mysqli_query($koneksi, "SELECT * FROM tbl_baranghilang p INNER JOIN tbl_kategori k on p.id_kategori = k.id_kategori where status='Selesai'");
                                         while ($kat = mysqli_fetch_array($kueriKategori)) {
                                         ?>
                                             <tr>

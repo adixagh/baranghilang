@@ -21,7 +21,7 @@ include "../../lib/config.php";
     <link rel="stylesheet" href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    
+
 
 </head>
 
@@ -41,7 +41,7 @@ include "../../lib/config.php";
         Preloader end
     ********************-->
 
-    
+
     <!--**********************************
         Main wrapper start
     ***********************************-->
@@ -52,16 +52,18 @@ include "../../lib/config.php";
         ***********************************-->
         <div class="nav-header">
             <div class="gradient-3">
-            <div class="brand-logo">
-                <a href="index.html">
-                    <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
-                    <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
-                    <span class="brand-title">
-                        <h5><font face="Courier New" color="white">Pencarian Barang Hilang & Temuan</font></h5>
-                    </span>
-                </a>
+                <div class="brand-logo">
+                    <a href="index.html">
+                        <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+                        <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
+                        <span class="brand-title">
+                            <h5>
+                                <font face="Courier New" color="white">Pencarian Barang Hilang & Temuan</font>
+                            </h5>
+                        </span>
+                    </a>
+                </div>
             </div>
-        </div>
         </div>
         <!--**********************************
             Nav header end
@@ -70,9 +72,9 @@ include "../../lib/config.php";
         <!--**********************************
             Header start
         ***********************************-->
-        <div class="header">    
+        <div class="header">
             <div class="header-content clearfix">
-                
+
                 <div class="nav-control">
                     <div class="hamburger">
                         <span class="toggle-icon"><i class="icon-menu"></i></span>
@@ -99,7 +101,7 @@ include "../../lib/config.php";
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
-                                    <span class="">3 New Messages</span>  
+                                    <span class="">3 New Messages</span>
                                     <a href="javascript:void()" class="d-inline-block">
                                         <span class="badge badge-pill gradient-1">3</span>
                                     </a>
@@ -147,7 +149,7 @@ include "../../lib/config.php";
                                             </a>
                                         </li>
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                         </li>
@@ -157,7 +159,7 @@ include "../../lib/config.php";
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
-                                    <span class="">2 New Notifications</span>  
+                                    <span class="">2 New Notifications</span>
                                     <a href="javascript:void()" class="d-inline-block">
                                         <span class="badge badge-pill gradient-2">5</span>
                                     </a>
@@ -169,7 +171,7 @@ include "../../lib/config.php";
                                                 <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
                                                 <div class="notification-content">
                                                     <h6 class="notification-heading">Events near you</h6>
-                                                    <span class="notification-text">Within next 5 days</span> 
+                                                    <span class="notification-text">Within next 5 days</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -178,7 +180,7 @@ include "../../lib/config.php";
                                                 <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
                                                 <div class="notification-content">
                                                     <h6 class="notification-heading">Event Started</h6>
-                                                    <span class="notification-text">One hour ago</span> 
+                                                    <span class="notification-text">One hour ago</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -196,18 +198,18 @@ include "../../lib/config.php";
                                                 <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
                                                 <div class="notification-content">
                                                     <h6 class="notification-heading">Events to Join</h6>
-                                                    <span class="notification-text">After two days</span> 
+                                                    <span class="notification-text">After two days</span>
                                                 </div>
                                             </a>
                                         </li>
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                         </li>
                         <li class="icons dropdown d-none d-md-flex">
-                            <a href="javascript:void(0)" class="log-user"  data-toggle="dropdown">
-                                <span>English</span>  <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                            <a href="javascript:void(0)" class="log-user" data-toggle="dropdown">
+                                <span>English</span> <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
                             </a>
                             <div class="drop-down dropdown-language animated fadeIn  dropdown-menu">
                                 <div class="dropdown-content-body">
@@ -219,7 +221,7 @@ include "../../lib/config.php";
                             </div>
                         </li>
                         <li class="icons dropdown">
-                            <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
+                            <div class="user-img c-pointer position-relative" data-toggle="dropdown">
                                 <span class="activity active"></span>
                                 <img src="images/user/1.png" height="40" width="40" alt="">
                             </div>
@@ -231,10 +233,11 @@ include "../../lib/config.php";
                                         </li>
                                         <li>
                                             <a href="javascript:void()">
-                                                <i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill gradient-1">3</div>
+                                                <i class="icon-envelope-open"></i> <span>Inbox</span>
+                                                <div class="badge gradient-3 badge-pill gradient-1">3</div>
                                             </a>
                                         </li>
-                                        
+
                                         <hr class="my-2">
                                         <li>
                                             <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
@@ -249,7 +252,7 @@ include "../../lib/config.php";
             </div>
         </div>
 
-        
+
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
@@ -257,7 +260,7 @@ include "../../lib/config.php";
         <!--**********************************
             Sidebar start
         ***********************************-->
-        <div class="nk-sidebar">           
+        <div class="nk-sidebar">
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
                     <li>
@@ -265,7 +268,7 @@ include "../../lib/config.php";
                             <i class="fa fa-home menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                     </li>
-                  
+
                     <li>
                         <a href="adminweb.php?module=member" aria-expanded="false">
                             <i class="fa fa-user menu-icon"></i><span class="nav-text">Member</span>
@@ -287,14 +290,14 @@ include "../../lib/config.php";
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void()" aria-expanded="false">
+                        <a href="adminweb.php?module=barangterkonfirmasi" aria-expanded="false">
                             <i class="fa fa-bank menu-icon"></i><span class="nav-text">Barang Terkonfirmasi</span>
                         </a>
                     </li>
-                    
-                        <a href="../module/logout/logout.php" aria-expanded="false">
-                            <i class="icon-logout menu-icon"></i><span class="nav-text">Logout</span>
-                        </a>
+
+                    <a href="../module/logout/logout.php" aria-expanded="false">
+                        <i class="icon-logout menu-icon"></i><span class="nav-text">Logout</span>
+                    </a>
                     </li>
                 </ul>
             </div>
@@ -303,42 +306,49 @@ include "../../lib/config.php";
         //home
         if ($_GET['module'] == 'home') {
             include "../module/home/home.php";
-        //kategori
+            //kategori
         } elseif ($_GET['module'] == 'kategori') {
             include "../module/kategori/list_kategori.php";
         } elseif ($_GET['module'] == 'tambah_kategori') {
             include "../module/kategori/form_tambah.php";
         } elseif ($_GET['module'] == 'edit_kategori') {
             include "../module/kategori/form_edit.php";
-        //
+            //
         } elseif ($_GET['module'] == 'merk') {
             include "..module/merk/list_merk.php";
         } elseif ($_GET['module'] == 'tambah_merk') {
             include "..module/merk/form_tambah.php";
         } elseif ($_GET['module'] == 'edit_merk') {
             include "..module/merk/form_edit.php";
-        //barang hilang
+            //barang hilang
         } elseif ($_GET['module'] == 'baranghilang') {
             include "../module/baranghilang/list_baranghilang.php";
         } elseif ($_GET['module'] == 'tambah_baranghilang') {
             include "../module/baranghilang/form_tambah.php";
         } elseif ($_GET['module'] == 'edit_baranghilang') {
             include "../module/baranghilang/form_edit.php";
-        //barang temuan
+            //Barang Terkonfirmasi
+        } elseif ($_GET['module'] == 'barangterkonfirmasi') {
+            include "../module/terkonfirmasi/list_terkonfirmasi.php";
+            // } elseif ($_GET['module'] == 'tambah_baranghilang') {
+            //     include "../module/baranghilang/form_tambah.php";
+            // } elseif ($_GET['module'] == 'edit_baranghilang') {
+            //     include "../module/baranghilang/form_edit.php";
+            //barang temuan
         } elseif ($_GET['module'] == 'barangtemuan') {
             include "../module/barangtemuan/list_barangtemuan.php";
         } elseif ($_GET['module'] == 'tambah_barangtemuan') {
             include "../module/barangtemuan/form_tambah.php";
         } elseif ($_GET['module'] == 'edit_barangtemuan') {
             include "../module/barangtemuan/form_edit.php";
-        //jasa kirim
+            //jasa kirim
         } elseif ($_GET['module'] == 'jasa') {
             include "..module/jasa/list_jasa.php";
         } elseif ($_GET['module'] == 'tambah_jasa') {
             include "..module/jasa/form_tambah.php";
         } elseif ($_GET['module'] == 'edit_jasa') {
             include "..module/jasa/form_edit.php";
-        //biaya kirim
+            //biaya kirim
         } elseif ($_GET['module'] == 'ongkir') {
             include "..module/biaya/list_ongkir.php";
         } elseif ($_GET['module'] == 'tambah_ongkir') {
@@ -361,40 +371,40 @@ include "../../lib/config.php";
         <!--**********************************
             Footer start
         ***********************************-->
-    <!--**********************************
+        <!--**********************************
         Main wrapper end
     ***********************************-->
 
-    <!--**********************************
+        <!--**********************************
         Scripts
     ***********************************-->
-    <script src="plugins/common/common.min.js"></script>
-    <script src="js/custom.min.js"></script>
-    <script src="js/settings.js"></script>
-    <script src="js/gleek.js"></script>
-    <script src="js/styleSwitcher.js"></script>
+        <script src="plugins/common/common.min.js"></script>
+        <script src="js/custom.min.js"></script>
+        <script src="js/settings.js"></script>
+        <script src="js/gleek.js"></script>
+        <script src="js/styleSwitcher.js"></script>
 
-    <!-- Chartjs -->
-    <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
-    <!-- Circle progress -->
-    <script src="./plugins/circle-progress/circle-progress.min.js"></script>
-    <!-- Datamap -->
-    <script src="./plugins/d3v3/index.js"></script>
-    <script src="./plugins/topojson/topojson.min.js"></script>
-    <script src="./plugins/datamaps/datamaps.world.min.js"></script>
-    <!-- Morrisjs -->
-    <script src="./plugins/raphael/raphael.min.js"></script>
-    <script src="./plugins/morris/morris.min.js"></script>
-    <!-- Pignose Calender -->
-    <script src="./plugins/moment/moment.min.js"></script>
-    <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
-    <!-- ChartistJS -->
-    <script src="./plugins/chartist/js/chartist.min.js"></script>
-    <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+        <!-- Chartjs -->
+        <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
+        <!-- Circle progress -->
+        <script src="./plugins/circle-progress/circle-progress.min.js"></script>
+        <!-- Datamap -->
+        <script src="./plugins/d3v3/index.js"></script>
+        <script src="./plugins/topojson/topojson.min.js"></script>
+        <script src="./plugins/datamaps/datamaps.world.min.js"></script>
+        <!-- Morrisjs -->
+        <script src="./plugins/raphael/raphael.min.js"></script>
+        <script src="./plugins/morris/morris.min.js"></script>
+        <!-- Pignose Calender -->
+        <script src="./plugins/moment/moment.min.js"></script>
+        <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+        <!-- ChartistJS -->
+        <script src="./plugins/chartist/js/chartist.min.js"></script>
+        <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
 
 
-    <script src="./js/dashboard/dashboard-1.js"></script>
+        <script src="./js/dashboard/dashboard-1.js"></script>
 
 </body>
 
