@@ -1,12 +1,12 @@
 <?php
 session_start();
-if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
-    echo "<center>Anda harus login terlebih dahulu<br>";
-    echo "<a href=../../index.php>Klik disini untuk Login</a></center>";
-} else {
+// if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+//     echo "<center>Anda harus login terlebih dahulu<br>";
+//     echo "<a href=../../index.php>Klik disini untuk Login</a></center>";
+// } else {
     include "../../../lib/config.php";
     include "../../../lib/koneksi.php";
-
+    $id_member = $_POST['id_member'];
     date_default_timezone_set('Asia/Jakarta');
 
     if ($_POST) {
@@ -14,7 +14,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         $ukuran_file = $_FILES['gambar']['size'];
         $tipe_file = $_FILES['gambar']['type'];
         $tmp_file = $_FILES['gambar']['tmp_name'];
-        $path = "../../upload/" . $namaGambar;
+        $path = "../../../admin/upload/" . $namaGambar;
 
         $kategori = $_POST['kategori'];
         $namaBarang = $_POST['namaBarang'];
@@ -64,42 +64,41 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
             if ($tipe_file == "image/jpeg" || $tipe_file = "image/png" || $tipe_file = "image/jpg") {
                 if ($ukuran_file <= 1000000) {
                     if (move_uploaded_file($tmp_file, $path)) {
-                        $QuerySimpan = mysqli_query($koneksi, "INSERT INTO tbl_baranghilang (id_kategori, nama, gambar, deskripsi, tempat_terakhir, no_telp, tanggal) VALUES ('$kategori','$namaBarang','$namaGambar','$deskripsiBarang','$tempatTerakhir','$nomerTelepon','$tanggal')");
+                        $QuerySimpan = mysqli_query($koneksi, "INSERT INTO tbl_barangtemuan (id_kategori, nama, gambar, deskripsi, tempat_terakhir, no_telp, tanggal, id_member) VALUES ('$kategori','$namaBarang','$namaGambar','$deskripsiBarang','$tempatTerakhir','$nomerTelepon','$tanggal','$id_member')");
                         if ($QuerySimpan) {
                             echo "
                     <script>
                         alert('Data berhasil disimpan');
-                        window.location = '$admin_url'+'asset/adminweb.php?module=baranghilang';
+                        window.location = 'http://localhost/baranghilang/barangtemuan.php';
                     </script>";
                         } else {
                             echo "
                     <script>
                         alert('Data gagal disimpan');
-                        window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
+                        window.location = 'http://localhost/baranghilang/inputbarangtemuan.php';
                     </script>";
                         }
                     } else {
                         echo "
                 <script>
                     alert('Data gambar gagal');
-                    window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
+                    window.location = 'http://localhost/baranghilang/inputbarangtemuan.php';
                 </script>";
                     }
                 } else {
                     echo "
             <script>
                 alert('Data gambar terlalu besar');
-                window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
+                window.location = 'http://localhost/baranghilang/inputbarangtemuan.php';
             </script>";
                 }
             } else {
                 echo "
         <script>
             alert('Type gambar salah');
-            window.location = '$admin_url'+'asset/adminweb.php?module=tambah_baranghilang';
+            window.location = 'http://localhost/baranghilang/inputbarangtemuan.php';
         </script>";
             }
         
      
-}
 }

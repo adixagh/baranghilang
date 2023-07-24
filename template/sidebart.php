@@ -13,7 +13,7 @@
           </ul>
         </div>
 
-        <p>Search by tags</p>
+        <!-- <p>Search by tags</p>
         <div class="btn-group" data-toggle="buttons">
         <?php
                 $QueryKategori = mysqli_query($koneksi, "SELECT * FROM tbl_kategori");
@@ -26,7 +26,7 @@
           <?php } ?>
           
         </div>
-    </div>
+    </div> -->
 
 <div class="container">
       <div class="row">

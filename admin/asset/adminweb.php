@@ -11,7 +11,7 @@ include "../../lib/config.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
+    <title>Admin Pencarian Barang Hilang & Temuan</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <!-- Pignose Calender -->
@@ -265,11 +265,7 @@ include "../../lib/config.php";
                             <i class="fa fa-home menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="adminweb.php?module=admin" aria-expanded="false">
-                            <i class="fa fa-user menu-icon"></i><span class="nav-text">Admin</span>
-                        </a>
-                    </li>
+                  
                     <li>
                         <a href="adminweb.php?module=member" aria-expanded="false">
                             <i class="fa fa-user menu-icon"></i><span class="nav-text">Member</span>

@@ -6,8 +6,8 @@
 
             <div class="col-xs-6 col-sm-3">
               <div class="item">
-                <i class="ion-ios-telephone-outline"></i>
-                <h1>Sangat <br> <span>Terpercaya</span></h1>
+                <i class="ion-android-search"></i>
+                <h1>Pencarian <br> <span>Cepat</span></h1>
               </div>
             </div>
             <div class="col-xs-6 col-sm-3">
@@ -18,14 +18,14 @@
             </div>
             <div class="col-xs-6 col-sm-3">
               <div class="item">
-                <i class="ion-ios-gear-outline"></i>
-                <h1> Rajin <br> <span>Menabung</span></h1>
+                <i class="ion-android-checkbox-outline"></i>
+                <h1> Keamanan <br> <span>Terjaga</span></h1>
               </div>
             </div>
             <div class="col-xs-6 col-sm-3">
               <div class="item">
                 <i class="ion-ios-loop"></i>
-                <h1> Tidak <br> <span>Sombong</span> </h1>
+                <h1> Penggunaan <br> <span>Mudah</span> </h1>
               </div>
             </div>
 
@@ -38,28 +38,28 @@
         <div class="container align-center">
             <hr class="offset-md">
 
-            <h1 class="h3 upp">Join our newsletter</h1>
-            <p>Get more information and receive special discounts for our products.</p>
+            <!-- <h1 class="h3 upp">Jika ada kritik,saran, atau pesan ke admin bisa disampaikan dibawah ini</h1>
+     
             <hr class="offset-sm">
 
             <form action="index.php" method="post">
               <div class="input-group">
-                <input type="email" name="email" value="" placeholder="E-mail" required="" class="form-control">
+                <input type="email" name="email" value="" placeholder="" required="" class="form-control">
                 <span class="input-group-btn">
-                  <button type="submit" class="btn btn-primary"> Subscribe <i class="ion-android-send"></i> </button>
+                  <button type="submit" class="btn btn-primary"> Kirim <i class="ion-android-send"></i> </button>
                 </span>
-              </div><!-- /input-group -->
-            </form>
+              </div> /input-group
+            </form> -->
             <hr class="offset-lg">
             <hr class="offset-md">
 
             <div class="social">
-              <a href="#"><i class="ion-social-facebook"></i></a>
-              <a href="#"><i class="ion-social-twitter"></i></a>
-              <a href="#"><i class="ion-social-googleplus-outline"></i></a>
-              <a href="#"><i class="ion-social-instagram-outline"></i></a>
-              <a href="#"><i class="ion-social-linkedin-outline"></i></a>
-              <a href="#"><i class="ion-social-youtube-outline"></i></a>
+              <a href="https://www.facebook.com/"><i class="ion-social-facebook"></i></a>
+              <a href="https://twitter.com/"><i class="ion-social-twitter"></i></a>
+              <!-- <a href="#"><i class="ion-social-googleplus-outline"></i></a> -->
+              <a href="https://www.instagram.com/"><i class="ion-social-instagram-outline"></i></a>
+              <!-- <a href="#"><i class="ion-social-linkedin-outline"></i></a> -->
+              <!-- <a href="#"><i class="ion-social-youtube-outline"></i></a> -->
             </div>
 
 
@@ -69,7 +69,7 @@
       </div>
 
 
-      <div class="container">
+      <!-- <div class="container">
         <hr class="offset-md">
 
         <div class="row menu">
@@ -148,7 +148,7 @@
 
           </div>
         </div>
-      </div>
+      </div> 
 
       <hr>
 
@@ -177,7 +177,7 @@
       </div>
     </footer>
 
-    <!-- Modal -->
+  
     <div class="modal fade" id="Modal-ForgotPassword" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -227,7 +227,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery-latest.min.js"></script>

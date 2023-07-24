@@ -1,5 +1,6 @@
 <?php
 session_start();
+// $id_member = $_SESSION['id_member'];
 include "lib/koneksi.php";
 include "lib/config.php";
 include "template/header.php";

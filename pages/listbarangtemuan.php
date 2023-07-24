@@ -1,8 +1,14 @@
+<?php
+
+// $_SESSION['id_member']=$id_member;
+// var_dump($_SESSION['id_member']);
+?>
+
 <div class="col-sm-9 products">
           <div class="row">
 
           <?php
-						$QueryBarang = mysqli_query($koneksi, "SELECT * FROM tbl_barangtemuan p LEFT JOIN tbl_kategori k on p.id_kategori = k.id_kategori");
+						$QueryBarang = mysqli_query($koneksi, "SELECT * FROM tbl_barangtemuan p LEFT JOIN tbl_kategori k on p.id_kategori = k.id_kategori where id_member='{$_SESSION['id_member']}'");
 						while ($show = mysqli_fetch_array($QueryBarang)) {
 						?>
             <div class="col-sm-6 col-md-4 product">
@@ -14,7 +20,6 @@
                 <h1 class="h4"><?= $show['nama']; ?></h1>
                 <p class="price"><?= $show['nama_kategori']; ?></p>
                 <label><?= $show['tempat_terakhir']; ?></label>
-                <label><b><?= $show['tanggal']; ?></b></label>
 
                 <a href="detailt.php?id_barangtemuan=<?php echo $show['id_barangtemuan']; ?>" class="btn btn-link"> Details</a>
                 <button class="btn btn-primary btn-rounded btn-sm"> <i class="ion-bag"></i> Konfirmasi</button>

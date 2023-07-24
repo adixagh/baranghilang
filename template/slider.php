@@ -12,9 +12,9 @@
                   <div class="container">
                     <div class="row">
                       <div class="col-sm-12 align-center">
-                        <h1>Bertemu langsung dengan pemilik atau penemu barang</h1>
-                        <p>Hubungi kontak yang tersedia pada detail</p>
-                        <a href="baranghilang.php">Klik disini ></a>
+                        <h1>Ingin Mencari Barang Temuan?</h1>
+              
+                        <a href="barangtemuan.php">Klik disini ></a>
                         <br><br>
                       </div>
                       <div class="col-sm-6 col-sm-offset-3 align-center">
@@ -34,12 +34,12 @@
                 <div class="inside-content">
                   <div class="container">
                     <div class="row">
-                      <div class="col-sm-8 col-sm-offset-2 align-center">
-                        <img src="assets/img/carousel/surfaces.jpg" alt="Surface Pro"/>
+                      <div class="col-sm-6 col-sm-offset-3 align-center">
+                        <img src="assets/img/carousel/findthing.jpg" alt="Surface Pro"/>
                       </div>
                       <div class="col-sm-12 align-center">
-                        <h1>Kemudahan dalam menemukan barang hilang</h1>
-                        <p>Temukan barang anda yang hilang disini</p>
+                        <h1>Ingin Mencari Barang Hilang?</h1>
+                      
                         <a href="baranghilang.php">Klik disini ></a>
                       </div>
                     </div>
@@ -56,20 +56,14 @@
                 <div class="inside-content">
                   <div class="container">
                     <div class="row">
-                      <div class="col-sm-5 col-sm-offset-1 align-center">
-                        <img src="assets/img/carousel/ipadair2.jpg" alt="iPad Air 2" class="hidden-xs hidden-sm"/>
-                        <img src="assets/img/carousel/ipadair2m.jpg" alt="iPad Air 2" class="hidden-md hidden-lg"/>
-                      </div>
-                      <div class="col-sm-4 align-left">
-                        <br class="hidden-xs hidden-sm"><br class="hidden-xs hidden-sm"><br class="hidden-xs hidden-sm">
-                        <br class="hidden-xs hidden-sm"><br class="hidden-xs hidden-sm"><br class="hidden-xs hidden-sm">
-                        <h1>Kemudahan dalam menemukan pemilik barang</h1>
+                      <div class="col-sm-12 align-center">
+                        <h1>Bingung Menggunakan Aplikasi?</h1>
+              
+                        <a href="rules.php">Klik disini ></a>
                         <br>
-                        
-                        <p>
-                          Yeah
-                        </p>
-                        <a href="barangtemuan.php">Klik disini ></a>
+                      </div>
+                      <div class="col-sm-6 col-sm-offset-3 align-center">
+                        <img src="assets/img/carousel/confused.png" alt="Laptops"/>
                       </div>
                     </div>
                   </div>
@@ -81,8 +75,8 @@
 
         <ul class="markers">
           <li data-marker="1"><img src="assets/img/carousel/handshakes.png" alt="Background"/></li>
-          <li data-marker="2" class="active"><img src="assets/img/carousel/surfaces.jpg" alt="Background"/></li>
-          <li data-marker="3"><img src="assets/img/carousel/ipadair2.jpg" alt="Background"/></li>
+          <li data-marker="2" class="active"><img src="assets/img/carousel/findthing.jpg" alt="Background"/></li>
+          <li data-marker="3"><img src="assets/img/carousel/confused.png" alt="Background"/></li>
         </ul>
       </div>
     </header>

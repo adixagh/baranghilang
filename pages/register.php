@@ -2,7 +2,7 @@
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 md-padding">
         <?php echo isset($message['register']) ? $message['register'] : ''; ?>
-          <h1 class="align-center">New Customer</h1>
+          <h1 class="align-center">Daftar</h1>
           <br>
 
           <form class="join" action="<?= $base_url ?>pages/aksi/register.php" method="post">
@@ -34,9 +34,10 @@
 
             <br><br>
             <p>
-            Already have an account? Login now! <a href="login.php"> Login > 
+            Sudah punya akun? Silahkan login! <a href="login.php"> Login > 
             </p>
           </form>
+          <br><br><br>
 
           <br class="hidden-sm hidden-md hidden-lg">
         </div>

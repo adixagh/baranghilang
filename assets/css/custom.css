@@ -1570,14 +1570,14 @@
 			display: inline-block;
 			font-size: 22px;
 			line-height: 28px;
-			color: #00C500;
+			color: #00A1B4;
 		}
 
 		.products .product p.sale{
 			display: inline-block;
 			font-size: 22px;
 			line-height: 28px;
-			color: #00C500;
+			color: #00A1B4;
 		}
 
 		.products .product p.through{
@@ -1664,7 +1664,7 @@
 			display: inline-block;
 		    font-size: 22px;
 		    line-height: 28px;
-		    color: #00C500;
+		    color: #00A1B4;
 		}
 
 		.product p.through {
@@ -1672,7 +1672,7 @@
 		    text-decoration: line-through;
 		    font-size: 16px;
 		    line-height: 22px;
-		    color: #FF0000;
+		    color: #00A1B4;
 		}
 	/* Main */
 

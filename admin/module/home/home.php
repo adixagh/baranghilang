@@ -79,8 +79,8 @@
                                 <div class="card">
                                     <div class="card-body pb-0 d-flex justify-content-between">
                                         <div>
-                                            <h4 class="mb-1">Adixa Goulbudin Hekmatyar</h4>
-                                            <p>18.12.0672</p>
+                                            <!-- <h4 class="mb-1">Adixa Goulbudin Hekmatyar</h4>
+                                            <p>18.12.0672</p> -->
                                             <h3 class="m-0"></h3>
                                         </div>
                                         <div>

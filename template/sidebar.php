@@ -1,7 +1,7 @@
 <hr class="offset-lg">
 
     <div class="container tags">
-        <div class="btn-group pull-right">
+        <!-- <div class="btn-group pull-right">
           <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="ion-arrow-down-b"></i> Sorting by name
           </button>
@@ -11,9 +11,9 @@
             <li><a href="#"> <i class="ion-arrow-down-c"></i> Price [Low-High]</a></li>
             <li><a href="#"> <i class="ion-arrow-up-c"></i> Price [High-Low]</a></li>
           </ul>
-        </div>
+        </div> -->
 
-        <p>Search by tags</p>
+        <!-- <p>Search by tags</p>
         <div class="btn-group" data-toggle="buttons">
         <?php
                 $QueryKategori = mysqli_query($koneksi, "SELECT * FROM tbl_kategori");
@@ -26,7 +26,7 @@
           <?php } ?>
           
         </div>
-    </div>
+    </div>  -->
 
 <div class="container">
       <div class="row">

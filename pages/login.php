@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 md-padding">
-          <h1 class="align-center">Returning Member</h1>
+          <h1 class="align-center">Login</h1>
           <br>
 
           <form class="signin" action="<?= $base_url ?>pages/aksi/login.php" method="post">
@@ -19,7 +19,7 @@
             <br><br>
 
             <p>
-              If you already have an account with us, please login.
+              Jika sudah punya akun, silahkan Login.
             </p>
             <hr class="offset-xs">
 
@@ -27,9 +27,9 @@
             <hr class="offset-sm">
 
             <p>
-              Don't have an account? Create one now! <a href="register.php"> Registration > </a>
+              Belum punya akun? Ayo buat sekarang! <a href="register.php"> Registrasi > </a>
             </p>
-
+          <br><br><br>
           </form>
         </div>
       </div>

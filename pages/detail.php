@@ -23,6 +23,7 @@ $id_baranghilang = $_GET['id_baranghilang'];
 						while ($show = mysqli_fetch_array($QueryBarang)) {
 						?>
                 <div class="item active" data-marker="1">
+                <br>
                 <img src="admin/upload/<?= $show['gambar']; ?> " />
                 </div>
                 
@@ -31,15 +32,14 @@ $id_baranghilang = $_GET['id_baranghilang'];
             </div>
           </div>
           <div class="col-sm-5 col-md-5">
+          <h1 ><?= $show['nama']; ?></h1>
+            <h3 style="font-family:'serif'">Di Posting Tanggal :</h3>
+            <h3 style="color:#00A1B4"><?= $show['tanggal']; ?></h3>
 
-            <h1><?= $show['nama']; ?></h1>
-
-            <p> &middot; <?= $show['tempat_terakhir']; ?></p>
-
-            <p class="price"><?= $show['nama_kategori']; ?></p>
+          
             <br><br>
 
-            <button class="btn btn-primary btn-rounded"> <i class="ion-bag"></i> Add to cart</button>
+            
           </div>
           
         </div>
@@ -82,7 +82,7 @@ $id_baranghilang = $_GET['id_baranghilang'];
               </div>
 
               <div class="row specification">
-                <div class="col-sm-6"> <label>No. Telp Pemegang Barang</label> </div>
+                <div class="col-sm-6"> <label>No. Telp Pemilik Barang</label> </div>
                 <div class="col-sm-6"> <p><?= $show['no_telp']; ?></p> </div>
               </div>
               
