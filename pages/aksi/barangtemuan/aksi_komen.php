@@ -9,7 +9,7 @@ include "../../../lib/koneksi.php";
 $id_member = $_POST['id_member'];
 $isiComment = $_POST['comment'];
 $tanggal = $_POST['dateNow'];
-$idBaranghilang = $_GET['id_baranghilang'];
+$idbarangtemuan = $_GET['id_barangtemuan'];
 
 date_default_timezone_set('Asia/Jakarta');
 
@@ -20,18 +20,18 @@ $QueryMember = mysqli_query($koneksi, "SELECT * FROM tbl_member WHERE id_member 
 $showMember = mysqli_fetch_array($QueryMember);
 $namaMember = $showMember['nama'];
 
-$QuerySimpan = mysqli_query($koneksi, "INSERT INTO tbl_komen (id_baranghilang, id_member, nama_member, isi_komen,tanggal) VALUES ($idBaranghilang,$id_member,'$namaMember','$isiComment','$ntanggal')");
+$QuerySimpan = mysqli_query($koneksi, "INSERT INTO tbl_komen (id_barangtemuan, id_member, nama_member, isi_komen,tanggal) VALUES ($idbarangtemuan,$id_member,'$namaMember','$isiComment','$ntanggal')");
 
 if ($QuerySimpan) {
     echo "
                     <script>
                         alert('Berhasil Comment');
-                        window.location = '$base_url'+'detail.php?id_baranghilang=$idBaranghilang';
+                        window.location = '$base_url'+'detailt.php?id_barangtemuan=$idbarangtemuan';
                     </script>";
 } else {
     echo "
                     <script>
                         alert('Gagal Comment');
-                        window.location = '$base_url'+'detail.php?id_baranghilang=$idBaranghilang';
+                        window.location = '$base_url'+'detailt.php?id_barangtemuan=$idbarangtemuan';
                     </script>";
 }

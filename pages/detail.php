@@ -105,9 +105,9 @@ $id_baranghilang = $_GET['id_baranghilang'];
     <!-- Comments -->
     <div class="col-sm-5">
       <div class="comments">
-        <h2 class="h3">What do you think? (#<?= $count[0]; ?>)</h2>
+        <h2 class="h3">Komentar (#<?= $count[0]; ?>)</h2>
         <br>
-
+      
 
         <?php
 
@@ -149,7 +149,7 @@ $id_baranghilang = $_GET['id_baranghilang'];
                     <input type="text" class="form-control" name="comment" id="commentInput" placeholder="Enter your comment">
                   </div>
                   <div class="col-sm-2 mr-0">
-                    <button type="submit" class="btn btn-warning">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
               </form>
