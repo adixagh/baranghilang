@@ -8,10 +8,10 @@ if (isset($_SESSION['error'])) {
   unset($_SESSION['post']);
 }
 
-$idBaranghilang = $_GET['id_baranghilang'];
-$QueryEdit = mysqli_query($koneksi, "SELECT * FROM tbl_baranghilang WHERE id_baranghilang = '$idBaranghilang'");
+$idbarangtemuan = $_GET['id_barangtemuan'];
+$QueryEdit = mysqli_query($koneksi, "SELECT * FROM tbl_barangtemuan WHERE id_barangtemuan = '$idbarangtemuan'");
 $row = mysqli_fetch_array($QueryEdit);
-$id_baranghilang = $row['id_baranghilang'];
+$id_barangtemuan = $row['id_barangtemuan'];
 $id_kategori = $row['id_kategori'];
 $nama = $row['nama'];
 $deskripsi = $row['deskripsi'];
@@ -29,8 +29,8 @@ $gambar = $row['gambar'];
       <h1 class="align-center">Edit Barang Hilang</h1>
       <br>
 
-      <form class="join" action="pages/aksi/baranghilang/aksi_edit.php" method="post" enctype="multipart/form-data">
-        <input type="hidden" class="form-control" name="id_baranghilang" value="<?= $idBaranghilang; ?>">
+      <form class="join" action="pages/aksi/barangtemuan/aksi_edit.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" class="form-control" name="id_barangtemuan" value="<?= $idbarangtemuan; ?>">
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-12">

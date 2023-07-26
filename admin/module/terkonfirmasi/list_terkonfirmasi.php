@@ -8,7 +8,7 @@ include "../../lib/koneksi.php";
         <div class="content-wrapper">
             <section class="content-header">
                 <h2>
-                    Manajemen Barang Hilang
+                    Manajemen Barang Terkonfirmasi
                 </h2>
             </section>
 
@@ -40,7 +40,7 @@ include "../../lib/koneksi.php";
                                             </tr>
                                         </thead>
                                         <?php
-                                        $kueriKategori = mysqli_query($koneksi, "SELECT * FROM tbl_baranghilang p INNER JOIN tbl_kategori k on p.id_kategori = k.id_kategori where status='Proses'");
+                                        $kueriKategori = mysqli_query($koneksi, "SELECT * FROM tbl_baranghilang p INNER JOIN tbl_kategori k on p.id_kategori = k.id_kategori where status='Selesai'");
                                         while ($kat = mysqli_fetch_array($kueriKategori)) {
                                         ?>
                                             <tr>
@@ -67,8 +67,59 @@ include "../../lib/koneksi.php";
                                     </table>
                                 </div>
                             </div>
+
+                            <h3 class="box-title">List Barang Temuan</h3>
+                                <div class="box-tools pull-right">
+                                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                </div>
+                            </div>
+                            <div class="box-body">
+                                <div class="table-responsive">
+                                    <table class="table no-margin">
+                                        <thead>
+                                            <tr>
+                                                <th>Nama Barang</th>
+                                                <th>Kategori</th>
+                                                <th>Deskripsi</th>
+                                                <th>Lokasi Terakhir</th>
+                                                <th>No. Telp</th>
+                                                <th>Tanggal</th>
+                                                <th>Gambar</th>
+                                                <th>Status</th>
+                                                <th style="width: 110px;">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <?php
+                                        $kueriKategori = mysqli_query($koneksi, "SELECT * FROM tbl_barangtemuan p INNER JOIN tbl_kategori k on p.id_kategori = k.id_kategori where status='Selesai'");
+                                        while ($kat = mysqli_fetch_array($kueriKategori)) {
+                                        ?>
+                                            <tr>
+                                                <td><?= $kat['nama']; ?></td>
+                                                <td><?= $kat['nama_kategori']; ?></td>
+                                                <td><?= $kat['deskripsi']; ?></td>
+                                                <td><?= $kat['tempat_terakhir']; ?></td>
+                                                <td><?= $kat['no_telp']; ?></td>
+                                                <td><?= $kat['tanggal']; ?></td>
+                                                <td><img src="../upload/<?= $kat['gambar']; ?>" height="80" width="120"></td>
+                                                <td><?= $kat['status']; ?></td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <a href="<?= $admin_url; ?>asset/adminweb.php?module=edit_barangtemuan&id_barangtemuan=<?= $kat['id_barangtemuan']; ?>">
+                                                            <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+                                                        </a>
+                                                        <a href="<?= $admin_url; ?>module/barangtemuan/aksi_hapus.php?id_barangtemuan=<?= $kat['id_barangtemuan']; ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')">
+                                                            <button class="btn btn-danger"><i class="fa fa-power-off"></i></button>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                    </table>
+                                </div>
+                            </div>
                             <div class="box-footer clearfix">
-                                <a href="adminweb.php?module=tambah_baranghilang" class="btn btn-primary ml-1 btn-flat pull-left">Tambah Barang</a>
+                               
                                 <a class="btn btn-sm btn-default btn-flat pull-right" data-toggle="modal" data-target="#laporan">Laporan</a>
 
                             </div>

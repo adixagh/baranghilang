@@ -8,19 +8,20 @@ session_start();
 include "../../../lib/config.php";
 include "../../../lib/koneksi.php";
 
-$idBaranghilang = $_GET['id_baranghilang'];
+$idbarangtemuan = $_GET['id_barangtemuan'];
 
-$QueryHapus = mysqli_query($koneksi, "DELETE FROM tbl_baranghilang WHERE id_baranghilang = '$idBaranghilang'");
+$QueryHapus = mysqli_query($koneksi, "UPDATE tbl_barangtemuan SET 
+status = 'Selesai' WHERE id_barangtemuan = '$idbarangtemuan'");
 if ($QueryHapus) {
     echo "
         <script>
-            alert('Data berhasil dihapus');
-            window.location = '$base_url'+'listbaranghilang.php';
+            alert('Data berhasil dikonfirmasi');
+            window.location = '$base_url'+'listbarangtemuan.php';
         </script>";
 } else {
     echo "
         <script>
-            alert('Data gagal dihapus');
-            window.location = '$base_url'+'listbaranghilang.php';
+            alert('Data gagal dikonfirmasi');
+            window.location = '$base_url'+'listbarangtemuan.php';
         </script>";
 }

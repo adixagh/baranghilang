@@ -9,7 +9,7 @@ $tipe_file = $_FILES['gambar']['type'];
 $tmp_file = $_FILES['gambar']['tmp_name'];
 $path = "../../../admin/upload/" . $namaGambar;
 
-$id_baranghilang = $_POST['id_baranghilang'];
+$id_barangtemuan = $_POST['id_barangtemuan'];
 $kategori = $_POST['kategori'];
 $namaBarang = $_POST['namaBarang'];
 $deskripsiBarang = $_POST['deskripsiBarang'];
@@ -49,45 +49,45 @@ if (empty($nomerTelepon)) {
 if ($tipe_file == "image/jpeg" || $tipe_file = "image/png" || $tipe_file = "image/jpg") {
     if ($ukuran_file <= 1000000) {
         if (move_uploaded_file($tmp_file, $path)) {
-            $QueryEdit = mysqli_query($koneksi, "UPDATE tbl_baranghilang SET 
+            $QueryEdit = mysqli_query($koneksi, "UPDATE tbl_barangtemuan SET 
                 id_kategori = $kategori,
                 nama = '$namaBarang',
                 deskripsi = '$deskripsiBarang',
                 gambar = '$namaGambar',
                 tempat_terakhir = '$tempatTerakhir',
                 no_telp = '$nomerTelepon'
-                WHERE id_baranghilang = $id_baranghilang");
+                WHERE id_barangtemuan = $id_barangtemuan");
             if ($QueryEdit) {
                 echo "
                     <script>
                         alert('Data berhasil dirubah');
-                        window.location = '$base_url'+'listbaranghilang.php';
+                        window.location = '$base_url'+'listbarangtemuan.php';
                     </script>";
             } else {
                 echo "
                     <script>
                         alert('Data gagal dirubah');
-                        window.location = 'http://localhost/baranghilang/form_editbh.php'+'$id_baranghilang';
+                        window.location = 'http://localhost/barangtemuan/form_editbh.php'+'$id_barangtemuan';
                     </script>";
             }
         } else {
             echo "
                 <script>
                     alert('Data gambar gagal');
-                    window.location = 'http://localhost/baranghilang/form_editbh.php';
+                    window.location = 'http://localhost/barangtemuan/form_editbh.php';
                 </script>";
         }
     } else {
         echo "
             <script>
                 alert('Data gambar terlalu besar');
-                window.location = 'http://localhost/baranghilang/form_editbh.php';
+                window.location = 'http://localhost/barangtemuan/form_editbh.php';
             </script>";
     }
 } else {
     echo "
         <script>
             alert('Type gambar salah');
-            window.location = 'http://localhost/baranghilang/form_editbh.php';
+            window.location = 'http://localhost/barangtemuan/form_editbh.php';
         </script>";
 }

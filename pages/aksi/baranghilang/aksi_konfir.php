@@ -10,17 +10,18 @@ include "../../../lib/koneksi.php";
 
 $idBaranghilang = $_GET['id_baranghilang'];
 
-$QueryHapus = mysqli_query($koneksi, "DELETE FROM tbl_baranghilang WHERE id_baranghilang = '$idBaranghilang'");
+$QueryHapus = mysqli_query($koneksi, "UPDATE tbl_baranghilang SET 
+status = 'Selesai' WHERE id_baranghilang = '$idBaranghilang'");
 if ($QueryHapus) {
     echo "
         <script>
-            alert('Data berhasil dihapus');
+            alert('Data berhasil dikonfirmasi');
             window.location = '$base_url'+'listbaranghilang.php';
         </script>";
 } else {
     echo "
         <script>
-            alert('Data gagal dihapus');
+            alert('Data gagal dikonfirmasi');
             window.location = '$base_url'+'listbaranghilang.php';
         </script>";
 }
