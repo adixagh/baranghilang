@@ -8,128 +8,162 @@ $id_baranghilang = $_GET['id_baranghilang'];
 
 <hr class="offset-lg">
 
-    <div class="product">
-    	<div class="container">
-        <div class="row">
-          <div class="col-sm-7 col-md-7">
-            <div class="carousel product" data-count="5" data-current="1">
-              <!-- <button class="btn btn-control"></button> -->
+<div class="product">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 col-md-7">
+        <div class="carousel product" data-count="5" data-current="1">
+          <!-- <button class="btn btn-control"></button> -->
 
-<div class="items">
-  
+          <div class="items">
+
             <?php
-            
-						$QueryBarang = mysqli_query($koneksi, "SELECT * FROM tbl_baranghilang p JOIN tbl_kategori k on p.id_kategori = k.id_kategori where id_baranghilang = '$id_baranghilang'");
-						while ($show = mysqli_fetch_array($QueryBarang)) {
-						?>
-                <div class="item active" data-marker="1">
+
+            $QueryBarang = mysqli_query($koneksi, "SELECT * FROM tbl_baranghilang p JOIN tbl_kategori k on p.id_kategori = k.id_kategori where id_baranghilang = '$id_baranghilang'");
+            while ($show = mysqli_fetch_array($QueryBarang)) {
+            ?>
+              <div class="item active" data-marker="1">
                 <br>
                 <img src="admin/upload/<?= $show['gambar']; ?> " />
-                </div>
-                
               </div>
 
-            </div>
           </div>
-          <div class="col-sm-5 col-md-5">
-          <h1 ><?= $show['nama']; ?></h1>
-            <h3 style="font-family:'serif'">Di Posting Tanggal :</h3>
-            <h3 style="color:#00A1B4"><?= $show['tanggal']; ?></h3>
 
-          
-            <br><br>
-
-            
-          </div>
-          
         </div>
-        <?php } ?>
-        
-        <br><br><br>
-        
-        
+      </div>
+      <div class="col-sm-5 col-md-5">
+        <h1><?= $show['nama']; ?></h1>
+        <h3 style="font-family:'serif'">Di Posting Tanggal :</h3>
+        <h3 style="color:#00A1B4"><?= $show['tanggal']; ?></h3>
 
 
-	    	<div class="row">
-	    		<div class="col-sm-7">
-          <?php
-            
-						$QueryBarang = mysqli_query($koneksi, "SELECT * FROM tbl_baranghilang p JOIN tbl_kategori k on p.id_kategori = k.id_kategori where id_baranghilang = '$id_baranghilang'");
-						while ($show = mysqli_fetch_array($QueryBarang)) {
-            ?>
-            
-	    		
-		    		 <br>
-
-		    		 
-
-             <h2>Info Lengkap Barang</h2>
-             <br>
-
-             <div class="row specification">
-                <div class="col-sm-6"> <label>Kategori</label> </div>
-                <div class="col-sm-6"> <p><?= $show['nama_kategori']; ?></p> </div>
-              </div>
-
-              <div class="row specification">
-                <div class="col-sm-6"> <label>Deskripsi</label> </div>
-                <div class="col-sm-6"> <p><?= $show['deskripsi']; ?></p> </div>
-              </div>
-
-              <div class="row specification">
-                <div class="col-sm-6"> <label>Lokasi Terakhir</label> </div>
-                <div class="col-sm-6"> <p><?= $show['tempat_terakhir']; ?></p> </div>
-              </div>
-
-              <div class="row specification">
-                <div class="col-sm-6"> <label>No. Telp Pemilik Barang</label> </div>
-                <div class="col-sm-6"> <p><?= $show['no_telp']; ?></p> </div>
-              </div>
-              
-              <?php } ?>
-          </div>
-          
-        
-
-          <div class="col-sm-5">
-            <div class="comments">
-              <h2 class="h3">What do you think? (#3)</h2>
-              <br>
+        <br><br>
 
 
-              <div class="wrapper">
-                <div class="content">
-                  <h3>Anne Hathaway</h3>
-                  <label>2 years ago</label>
-                  <p>
-                    Apple Music brings iTunes music streaming to the UK. But is it worth paying for? In our Apple Music review, we examine the service's features, UK pricing, audio quality and music library
-                  </p>
+      </div>
 
-
-                  <h3>Chris Hemsworth</h3>
-                  <label>Today</label>
-                  <p>
-                    Samsung's Galaxy S7 smartphone is getting serious hype. Here's what it does better than Apple's iPhone 6s.
-                  </p>
-
-
-                  <h3>Anne Hathaway</h3>
-                  <label>2 years ago</label>
-                  <p>
-                    Apple Music brings iTunes music streaming to the UK. But is it worth paying for? In our Apple Music review, we examine the service's features, UK pricing, audio quality and music library
-                  </p>
-                </div>
-              </div>
-              <br>
-
-              <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#Modal-Comment"> <i class="ion-chatbox-working"></i> Add comment </button>
-            </div>
-            <br><br>
-
-            
-	    		</div>
-        </div>
-        
-    	</div>
     </div>
-    <br><br>
+  <?php } ?>
+
+  <br><br><br>
+
+
+
+
+  <div class="row">
+    <div class="col-sm-7">
+      <?php
+
+      $QueryBarang = mysqli_query($koneksi, "SELECT * FROM tbl_baranghilang p JOIN tbl_kategori k on p.id_kategori = k.id_kategori where id_baranghilang = '$id_baranghilang'");
+      while ($show = mysqli_fetch_array($QueryBarang)) {
+      ?>
+
+
+        <br>
+
+
+
+        <h2>Info Lengkap Barang</h2>
+        <br>
+
+        <div class="row specification">
+          <div class="col-sm-6"> <label>Kategori</label> </div>
+          <div class="col-sm-6">
+            <p><?= $show['nama_kategori']; ?></p>
+          </div>
+        </div>
+
+        <div class="row specification">
+          <div class="col-sm-6"> <label>Deskripsi</label> </div>
+          <div class="col-sm-6">
+            <p><?= $show['deskripsi']; ?></p>
+          </div>
+        </div>
+
+        <div class="row specification">
+          <div class="col-sm-6"> <label>Lokasi Terakhir</label> </div>
+          <div class="col-sm-6">
+            <p><?= $show['tempat_terakhir']; ?></p>
+          </div>
+        </div>
+
+        <div class="row specification">
+          <div class="col-sm-6"> <label>No. Telp Pemilik Barang</label> </div>
+          <div class="col-sm-6">
+            <p><?= $show['no_telp']; ?></p>
+          </div>
+        </div>
+
+      <?php } ?>
+    </div>
+    <?php
+
+    $QueryBarang = mysqli_query($koneksi, "SELECT COUNT(id_komen) FROM tbl_komen  where id_baranghilang = '$id_baranghilang'");
+    $count = mysqli_fetch_array($QueryBarang);
+    ?>
+
+    <!-- Comments -->
+    <div class="col-sm-5">
+      <div class="comments">
+        <h2 class="h3">What do you think? (#<?= $count[0]; ?>)</h2>
+        <br>
+
+
+        <?php
+
+        $QueryBarang = mysqli_query($koneksi, "SELECT * FROM tbl_komen  where id_baranghilang = '$id_baranghilang'");
+        while ($show = mysqli_fetch_array($QueryBarang)) {
+          // Menentukan zona waktu yang berbeda (misalnya 'Asia/Jakarta')
+          $timezone = new DateTimeZone('Asia/Jakarta');
+
+          // Membuat objek DateTime untuk waktu saat ini dengan zona waktu yang ditentukan
+          $dateTimeNow = new DateTime('now', $timezone);
+
+          // Format tanggal dan waktu dengan zona waktu yang telah ditentukan
+          $formattedDateTime = $dateTimeNow->format('d-m-Y H:i:s');
+
+
+          $finalDate = date("d F Y - H:i:s", strtotime($show['tanggal']));
+        ?>
+
+
+          <div class="wrapper">
+            <div class="content">
+              <h3><?= $show['nama_member']; ?></h3>
+              <label><?= $finalDate; ?></label>
+              <p>
+                <?= $show['isi_komen']; ?>
+              </p>
+            <?php } ?>
+
+
+
+            <br>
+            <div class="mt-4 p-0">
+              <form action="pages/aksi/baranghilang/aksi_komen.php?id_baranghilang=<?php echo $id_baranghilang ?>" method="post">
+                <div class="form-group row">
+                  <label for="commentInput" class="col-sm-12 col-form-label">Your Comment:</label>
+                  <div class="col-sm-9">
+                    <input type="hidden" name="id_member" value="<?php echo $_SESSION['id_member']; ?>">
+                    <input type="hidden" name="dateNow" value="<?php echo $formattedDateTime; ?>">
+                    <input type="text" class="form-control" name="comment" id="commentInput" placeholder="Enter your comment">
+                  </div>
+                  <div class="col-sm-2 mr-0">
+                    <button type="submit" class="btn btn-warning">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            </div>
+          </div>
+
+      </div>
+      <br><br>
+
+
+    </div>
+  </div>
+
+  </div>
+</div>
+<br><br>

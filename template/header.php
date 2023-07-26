@@ -52,7 +52,7 @@
               <li ><a href="baranghilang.php">Barang Hilang</a></li> -->
           <!-- <li><a href="barangtemuan.php">Barang Temuan</a></li> -->
           <li class="<?php echo ($page == 'info') ? 'active' : ''; ?>"> <a class="active" href="rules.php">Info</a></li>
-          <li class="dropdown">
+          <li class="dropdown <?php echo ($page == 'posting') ? 'active' : ''; ?>">
             <a href="./" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Input dan List Barang <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li class="dropdown-header">Input</li>

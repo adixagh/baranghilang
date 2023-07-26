@@ -1,9 +1,9 @@
 -Active Menu (Done)
 -Edit List Barang Hilang(Done)
 -History Status | Admin | User(Done)
--Add Comment di Detail Barang
+-Add Comment di Detail Baranghilang
 
-
+LUNASS HUTANG IDP
 
 user :
 unang
